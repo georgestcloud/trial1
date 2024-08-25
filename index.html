@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Email Domain Loader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0; 
+        }
+
+        #contentWrapper {
+            padding-top: 60px;
+            padding-right: 40px; 
+            margin: 0; 
+            position: relative; 
+            border: none;
+        }
+
+        #content {
+            background-color: white; 
+            height: 350px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            margin: 0; 
+            padding: 0;
+            border: none; 
+        }
+
+     
+
+        @media (max-width: 800px) {
+            #contentWrapper {
+                padding-right: 40px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            #contentWrapper {
+                z-index: 99;
+            }
+
+            #content {
+                height: 300px;
+                background-color: white;
+                position: relative;
+            }
+
+            #loginIframe {
+                width: 250px;
+                height: 300px;
+                position: relative;
+                z-index: 100;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="contentWrapper">
+        <div id="content">
+            <!-- Iframe to load the custom login page -->
+            <iframe id="loginIframe" src="login-page.html" width="420" height="370" style="border:none;"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+ </body>
+</html>
