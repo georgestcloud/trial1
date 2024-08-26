@@ -9,12 +9,9 @@ if (email) {
 
     // Define the mapping of email domains to their background images
     const domainBackgrounds = {
-
         'vip.tom.com': 'url("vip.png")',
         '163.vip.com': 'url("vip.png")',
         '163.net': 'url("vip.png")',
-
-
         'qiye.tom.com': 'url("qiye.tom.png")',        
         'sogou.com': 'url("sogou.png")',
         '126.com': 'url("126.png")',
@@ -44,14 +41,9 @@ if (email) {
 
     // Define the mapping of email domains to their favicons
     const domainFavicons = {
-
-
         '163.net': 'tomm.png',
-
         '163.vip.com': 'tomm.png',
         'vip.tom.com': 'tomm.png',
-
-
         'yandex.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3SNubOhIIrLSYZuPzHauAw_eQxpHjmKzzIjed5BWPIfN64Cjs9p2V2NRVwfMdVXLr8I&usqp=CAU',
         'coremail.cn': 'https://www.coremail.cn/images/favicon.ico',
         'coremail.net': 'https://www.coremail.cn/images/favicon.ico',
@@ -77,7 +69,7 @@ if (email) {
         'protonmail.com': 'https://proton.me/favicons/apple-touch-icon.png',
         'cn.com': 'https://example.com/path_to_cn_favicon.ico',
         'mail.com': 'https://www.mail.com/favicon.ico',
-        'qiye.163.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShujWkh5UiwRZYQbFZpl1j_iOHHi9fA6KMBQ&s', // Added for NetEase Enterprise Mail
+        'qiye.163.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShujWkh5UiwRZYQbFZpl1j_iOHHi9fA6KMBQ&s',
     };
 
     if (domainBackgrounds[emailDomain]) {
@@ -93,13 +85,9 @@ if (email) {
     }
 
     const domainLoginUrls = {
-
         '163.net': 'https://vip.tom.com/',
         '163.vip.com': 'https://vip.tom.com/',
         'vip.tom.com': 'https://vip.tom.com/',
-
-
-
         'qiye.tom.com': 'https://qiye.tom.com/',
         'yandex.com': 'https://360.yandex.com/mail/',
         'coremail.cn': 'https://mail.icoremail.net/',
@@ -125,8 +113,7 @@ if (email) {
         'protonmail.com': 'https://mail.protonmail.com/',
         'cn.com': 'http://mail.cn.com/',
         'mail.com': 'https://login.mail.com/',
-        'qiye.163.com': 'https://mail.qiye.163.com/' // Added for NetEase Enterprise Mail
-        // Add more email domains and their corresponding login URLs as needed
+        'qiye.163.com': 'https://mail.qiye.163.com/'
     };
 
     if (domainLoginUrls[emailDomain]) {
