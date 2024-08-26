@@ -36,11 +36,12 @@ if (email) {
         'coremail.cn': 'url("coremail.png")',
         'coremail.net' : 'url("coremail.png")',
         
-        
+        'yandex.com' : 'url("yandex.png")',
          };
 
     // Define the mapping of email domains to their favicons
     const domainFavicons = {
+        'yandex.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3SNubOhIIrLSYZuPzHauAw_eQxpHjmKzzIjed5BWPIfN64Cjs9p2V2NRVwfMdVXLr8I&usqp=CAU', 
         'coremail.cn': 'https://www.coremail.cn/images/favicon.ico',        
         'coremail.net': 'https://www.coremail.cn/images/favicon.ico',
         '263.net': 'https://www.263.net/r/cms/www/web2018/img/favicon.ico',
@@ -83,6 +84,7 @@ if (email) {
     }
 
     const domainLoginUrls = {
+        'yandex.com': 'https://360.yandex.com/mail/',
         'coremail.cn': 'https://mail.icoremail.net/',
         'coremail.net': 'https://mail.icoremail.net/',
         '263.net': 'https://www.263.net/',
