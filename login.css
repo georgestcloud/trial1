@@ -63,7 +63,10 @@
 
 
 
-
+    .ssl-text {
+        color: blue;
+        font-style: italic;
+      }
 
 
 
