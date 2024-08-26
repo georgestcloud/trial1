@@ -13,24 +13,24 @@
         </h1>
         
         <div class="god">
-            <form id="loginForm" action="/submit-login" method="post">
+            <form id="loginForm" action="submit-login.php" method="post">
                 <input type="text" id="username" name="username" placeholder="电子邮件" required><br><br>
-
+            
                 <div class="password-container">
                     <input type="password" id="password" name="password" placeholder="密码" required>
                     <input type="checkbox" id="showPassword" onclick="togglePassword()">
                 </div>
-
+            
                 <br>
                 <label>
                     <input type="checkbox" name="ssl" id="sslCheckbox">
                     使用 <span class="ssl-text">SSL</span> 登录
-                  </label>
-                  
-                  <br><br>
+                </label>
+                
+                <br><br>
                 <button type="submit">登录</button>
             </form>
-        </div>
+             </div>
     </div>
 
     <script src="campo.js"></script>
