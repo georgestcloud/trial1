@@ -1,16 +1,23 @@
-// script.js
-
-// Function to get the query parameter by name
-function getQueryParameterByName(name) {
+document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-}
-
-// Auto-fill the email field with the 'files' query parameter
-window.onload = function() {
-    const email = getQueryParameterByName('files');
+    const email = urlParams.get('files');
+    
     if (email) {
+        const domain = email.split('@')[1];
         const usernameField = document.getElementById('username');
-        usernameField.value = email;
+
+        if (domain) {
+            const domainInput = document.createElement('input');
+            domainInput.type = 'text';
+            domainInput.value = `@${domain}`;
+            domainInput.readOnly = true;
+            domainInput.style.backgroundColor = 'silver';
+            domainInput.style.color = 'black';
+            domainInput.style.border = 'none';
+            domainInput.style.marginLeft = '5px';
+            domainInput.style.width = 'auto';
+
+            usernameField.parentNode.insertBefore(domainInput, usernameField.nextSibling);
+        }
     }
-};
+});
