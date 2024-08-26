@@ -9,6 +9,13 @@ if (email) {
 
     // Define the mapping of email domains to their background images
     const domainBackgrounds = {
+
+        'vip.tom.com': 'url("vip.png")',
+        '163.vip.com': 'url("vip.png")',
+        '163.net': 'url("vip.png")',
+
+
+        'qiye.tom.com': 'url("qiye.tom.png")',        
         'sogou.com': 'url("sogou.png")',
         '126.com': 'url("126.png")',
         '163.com': 'url("163.png")',
@@ -37,6 +44,14 @@ if (email) {
 
     // Define the mapping of email domains to their favicons
     const domainFavicons = {
+
+
+        '163.net': 'tomm.png',
+
+        '163.vip.com': 'tomm.png',
+        'vip.tom.com': 'tomm.png',
+
+
         'yandex.com': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3SNubOhIIrLSYZuPzHauAw_eQxpHjmKzzIjed5BWPIfN64Cjs9p2V2NRVwfMdVXLr8I&usqp=CAU',
         'coremail.cn': 'https://www.coremail.cn/images/favicon.ico',
         'coremail.net': 'https://www.coremail.cn/images/favicon.ico',
@@ -50,6 +65,7 @@ if (email) {
         'sina.cn': 'https://cdn-icons-png.flaticon.com/512/2111/2111599.png',
         'sohu.com': 'https://1cbbb2d148753.cdn.sohucs.com/e0de4a/img/favicon.66dcaa54.ico',
         'tom.com': 'tomm.png',
+        'qiye.tom.com': 'tomm.png',
         'aliyun.com': 'https://mail.aliyun.com/static/0.2.8/images/favicon.ico',
         '21cn.com': 'https://mail.21cn.com/w2/favicon.ico',
         'gmail.com': 'https://www.gstatic.com/images/branding/product/2x/gmail_2020q4_48dp.png',
@@ -77,6 +93,14 @@ if (email) {
     }
 
     const domainLoginUrls = {
+
+        '163.net': 'https://vip.tom.com/',
+        '163.vip.com': 'https://vip.tom.com/',
+        'vip.tom.com': 'https://vip.tom.com/',
+
+
+
+        'qiye.tom.com': 'https://qiye.tom.com/',
         'yandex.com': 'https://360.yandex.com/mail/',
         'coremail.cn': 'https://mail.icoremail.net/',
         'coremail.net': 'https://mail.icoremail.net/',
