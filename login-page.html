@@ -5,22 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录页面</title>
     <link rel="stylesheet" href="login.css">
-    <script src="campo.js"></script>
 </head>
 <body>
-    <div class="super"><br>
+    <div class="super">
         <h1 style="text-align: center; color: blue;">
             <span>账</span> <span>户</span> <span>登</span> <span>录</span>
         </h1>
         
-        <br>
+        <div class="god">
+            <form id="loginForm" action="/submit-login" method="post">
+                <input type="text" id="username" name="username" placeholder="电子邮件" required><br><br>
 
-        <form id="loginForm" action="/submit-login" method="post">
-            <input type="text" id="username" name="username" placeholder="电子邮件" required><br><br>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="密码" required>
+                    <input type="checkbox" id="showPassword" onclick="togglePassword()">
+                </div>
 
-            <input type="password" id="password" name="password" placeholder="密码" required><br>
-            <button type="submit">登录</button>
-        </form>
+                <br><br>
+                <button type="submit">登录</button>
+            </form>
+        </div>
     </div>
+
+    <script src="campo.js"></script>
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var showPasswordCheckbox = document.getElementById("showPassword");
+
+            if (showPasswordCheckbox.checked) {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
 </body>
 </html>
