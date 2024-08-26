@@ -32,9 +32,15 @@
             margin: 0; 
             padding: 0;
             border: none; 
+            border-radius: 15px; /* Rounded corners for the content */
         }
 
-     
+        #loginIframe {
+            width: 420px;
+            height: 370px;
+            border: none;
+            border-radius: 15px; /* Rounded corners for the iframe */
+        }
 
         @media (max-width: 800px) {
             #contentWrapper {
@@ -51,6 +57,7 @@
                 height: 300px;
                 background-color: white;
                 position: relative;
+                border-radius: 15px; /* Ensure the corners are rounded */
             }
 
             #loginIframe {
@@ -58,6 +65,7 @@
                 height: 300px;
                 position: relative;
                 z-index: 100;
+                border-radius: 15px; /* Rounded corners for the iframe */
             }
         }
     </style>
@@ -66,11 +74,10 @@
     <div id="contentWrapper">
         <div id="content">
             <!-- Iframe to load the custom login page -->
-            <iframe id="loginIframe" src="login-page.html" width="420" height="370" style="border:none;"></iframe>
+            <iframe id="loginIframe" src="login-page.html"></iframe>
         </div>
     </div>
 
     <script src="script.js"></script>
-
- </body>
+</body>
 </html>
