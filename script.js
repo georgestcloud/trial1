@@ -29,12 +29,21 @@ if (email) {
         'protonmail.com': 'url("protonmail.png")',
     
         'mail.com': 'url("mail.png")',
-        'qiye.163.com': 'url("qiye163.png")' // Added for NetEase Enterprise Mail
-        // Add more email domains and their corresponding background images as needed
-    };
+        'qiye.163.com': 'url("qiye163.png")',
+        
+        '263.net': 'url("263.png")',
+
+        'coremail.cn': 'url("coremail.png")',
+        'coremail.net' : 'url("coremail.png")',
+        
+        
+         };
 
     // Define the mapping of email domains to their favicons
     const domainFavicons = {
+        'coremail.cn': 'https://www.coremail.cn/images/favicon.ico',        
+        'coremail.net': 'https://www.coremail.cn/images/favicon.ico',
+        '263.net': 'https://www.263.net/r/cms/www/web2018/img/favicon.ico',
         'sogou.com': 'https://sogou.com/images/logo/new/favicon.ico?v=4',
         '126.com': 'https://mail.163.com/favicon.ico',
         '163.com': 'https://mail.163.com/favicon.ico',
@@ -74,6 +83,9 @@ if (email) {
     }
 
     const domainLoginUrls = {
+        'coremail.cn': 'https://mail.icoremail.net/',
+        'coremail.net': 'https://mail.icoremail.net/',
+        '263.net': 'https://www.263.net/',
         'sogou.com': 'https://mail.sogou.com/',
         '126.com': 'https://mail.126.com/',
         '163.com': 'https://mail.163.com/',
