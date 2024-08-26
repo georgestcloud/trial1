@@ -12,60 +12,62 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            padding: 0; 
+            padding: 0;
         }
 
         #contentWrapper {
             padding-top: 60px;
-            padding-right: 40px; 
-            margin: 0; 
-            position: relative; 
+            padding-right: 40px;
+            margin: 0;
+            position: relative;
             border: none;
         }
 
         #content {
-            background-color: white; 
-            height: 350px;
-            display: flex; 
-            align-items: center; 
+            background-color: white;
+            height: 380px;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            margin: 0; 
+            margin: 0;
             padding: 0;
-            border: none; 
+            border: none;
             border-radius: 15px; /* Rounded corners for the content */
         }
 
         #loginIframe {
             width: 420px;
-            height: 370px;
+            height: 380px;
             border: none;
             border-radius: 15px; /* Rounded corners for the iframe */
         }
 
-        @media (max-width: 800px) {
-            #contentWrapper {
-                padding-right: 40px;
-            }
-        }
-
         @media (max-width: 900px) {
+            body {
+                justify-content: center; /* Center content horizontally */
+            }
+
             #contentWrapper {
-                z-index: 99;
+                padding-right: 0; /* Remove padding for smaller screens */
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
 
             #content {
-                height: 300px;
+                height: 380px; /* Adjust height for smaller screens */
+                width: 90%; /* Make the content take 90% of the viewport width */
+                max-width: 300px; /* Ensure it doesn't exceed 300px */
                 background-color: white;
                 position: relative;
-                border-radius: 15px; /* Ensure the corners are rounded */
+                border-radius: 15px;
             }
 
             #loginIframe {
-                width: 250px;
-                height: 300px;
+                width: 100%;
+                height: 100%;
                 position: relative;
-                z-index: 100;
-                border-radius: 15px; /* Rounded corners for the iframe */
+                border-radius: 15px;
             }
         }
     </style>
