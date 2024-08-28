@@ -50,9 +50,10 @@ h2 {
     color: white; /* White text color for the button */
     border: none;
     padding: 10px 20px;
-    border-radius: 4px; /* Rounded corners for the button */
+    border-radius: 8px; /* Rounded corners for the button */
     cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px;
+    font-size: 12px;
+    width: 190px;
     transition: background-color 0.3s; /* Smooth transition for background color change */
 }
 
@@ -95,6 +96,7 @@ h2 {
     width: 100%;
     max-width: 250px;
     margin-bottom: 5px;
+    border-radius: 8px;
 }
 
 .icon {
@@ -111,6 +113,15 @@ h2 {
 .sky {
     margin-top: 10px;
     font-size: 12px;
-    color: gray;
+    color: black;
     text-align: center;
+ /* Default color */
+    cursor: default; /* Default cursor */
+    transition: color 0.3s ease;
+}
+
+
+.sky:hover {
+    color: blue; /* Change text color to blue on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
