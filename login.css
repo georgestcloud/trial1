@@ -1,93 +1,106 @@
-.super { align-items: center;
+/* Centering the content */
+.super {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    text-align: center; }
-    
-    
-    /* Basic styling for the page */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: white; /* Light gray background for better contrast */
-    }
-    
-    h1 {
-        color: blue;
-        margin-bottom: 20px;
-    }
-    
-    /* Form styling */
-    
-    /* Input fields styling */
-    #loginForm input[type="text"],
-    #loginForm input[type="password"] {
-        width: 250px;
-        height: 40px; /* Height 40px for uniformity */
-        padding: 8px;
-        margin: 10px 0;
-        border: 2px solid black; /* Black border for the input fields */
-        border-radius: 4px; /* Rounded corners for the input fields */
-        box-sizing: border-box; 
-        transition: border-color 0.3s; /* Smooth transition for border color change */
-    }
-    
-    #loginForm input[type="text"]:hover,
-    #loginForm input[type="password"]:hover,
-    #loginForm input[type="text"]:focus,
-    #loginForm input[type="password"]:focus {
-        border-color: blue; /* Blue border on hover or focus */
-    }
-    
-    /* Button styling */
-    #loginForm button {
-        background-color: blue; /* Blue background for the button */
-        color: white; /* White text color for the button */
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px; /* Rounded corners for the button */
-        cursor: pointer; /* Pointer cursor on hover */
-        font-size: 16px;
-        transition: background-color 0.3s; /* Smooth transition for background color change */
-    }
-    
-    #loginForm button:hover {
-        background-color: darkblue; /* Darker blue on hover */
-    }
-    
-    /* Google Translate widget styling */
-    #google_translate_element {
-        margin-top: 20px; /* Adds space above the Google Translate widget */
-    }
+    text-align: center;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+}
 
-    
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Light gray background for better contrast */
+}
 
+h1 {
+    color: blue;
+    margin-bottom: 20px;
+}
 
+/* Form styling */
 
-    .ssl-text {
-        color: blue;
-        font-style: italic;
-      }
+/* Input fields styling */
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: 250px;
+    height: 40px; /* Height 40px for uniformity */
+    padding: 8px 8px 8px 40px; /* Padding adjusted for the icon */
+    margin: 10px 0;
+    border: 2px solid black; /* Black border for the input fields */
+    border-radius: 4px; /* Rounded corners for the input fields */
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Smooth transition for border color change */
+}
 
+#loginForm input[type="text"]:hover,
+#loginForm input[type="password"]:hover,
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+    border-color: blue; /* Blue border on hover or focus */
+}
 
+/* Button styling */
+#loginForm button {
+    background-color: blue; /* Blue background for the button */
+    color: white; /* White text color for the button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px;
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
 
+#loginForm button:hover {
+    background-color: darkblue; /* Darker blue on hover */
+}
 
+/* Google Translate widget styling */
+#google_translate_element {
+    margin-top: 20px; /* Adds space above the Google Translate widget */
+}
 
+/* SSL Text styling */
+.ssl-text {
+    color: blue;
+    font-style: italic;
+}
 
+/* Password container styling */
+.password-container {
+    position: relative;
+    display: inline-block;
+}
 
-    .password-container {
-        position: relative;
-        display: inline-block;
-    }
-    
-    #password {
-        padding-right: 0; /* Add space for the checkbox */
-    }
-    
-    #showPassword {
-        position: absolute;
-        right: 0; /* Position the checkbox outside the password box */
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 10px; /* Optional spacing */
-    }
-    
+#password {
+    padding-right: 0; /* Add space for the checkbox */
+}
+
+#showPassword {
+    position: absolute;
+    right: 0; /* Position the checkbox outside the password box */
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px; /* Optional spacing */
+}
+
+/* Input field container for icons */
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 15px;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1.2rem;
+}
