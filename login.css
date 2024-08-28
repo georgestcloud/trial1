@@ -1,3 +1,4 @@
+
 /* Centering the content */
 .super {
     display: flex;
@@ -103,4 +104,13 @@ h2 {
     transform: translateY(-50%);
     color: #000; /* Black color for the icon */
     font-size: 1.2rem;
+}
+
+
+
+.sky {
+    margin-top: 10px;
+    font-size: 12px;
+    color: gray;
+    text-align: center;
 }
