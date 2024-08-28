@@ -28,7 +28,7 @@ h2 {
 #loginForm input[type="text"],
 #loginForm input[type="password"] {
     width: 250px;
-    height: 40px; /* Height 40px for uniformity */
+    height: 35px; /* Height 40px for uniformity */
     padding: 8px 8px 8px 40px; /* Padding adjusted for the icon */
     margin: 10px 0;
     border: 2px solid black; /* Black border for the input fields */
