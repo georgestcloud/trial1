@@ -126,3 +126,14 @@ h2 {
     color: blue; /* Change text color to blue on hover */
     cursor: pointer; /* Change cursor to pointer on hover */
 }
+
+
+
+
+/* Hover effects for input fields and button */
+#loginForm input[type="text"]:hover,
+#loginForm input[type="password"]:hover,
+#loginForm button:hover {
+    border-color: blue; /* Blue border on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5); /* Blue box shadow on hover */
+}
